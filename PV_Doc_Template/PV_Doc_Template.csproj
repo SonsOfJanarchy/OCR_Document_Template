@@ -51,6 +51,7 @@
     <Compile Include="IdentificationTemplates\NewJerseyTemplates.cs" />
     <Compile Include="IdentificationReturnModel.cs" />
     <Compile Include="InsuranceCardMapper.cs" />
+    <Compile Include="OCRRawDataModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
