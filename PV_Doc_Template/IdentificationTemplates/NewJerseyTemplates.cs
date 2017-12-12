@@ -10,10 +10,10 @@ namespace PV_Doc_Template.IdentificationTemplates
 {
     public class NewJerseyTemplates
     {
-        public IndentificationReturnModel MapDataToTemplate(string[] data)
+        public IdentificationReturnModel MapDataToTemplate(string[] data)
         {
             var dataHelper = new DataHelpers();
-            var model = new IndentificationReturnModel();
+            var model = new IdentificationReturnModel();
 
             if (data.Contains("DRIVER") && data.Contains("LICENSE"))
             {

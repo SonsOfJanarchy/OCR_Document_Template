@@ -49,7 +49,7 @@
     <Compile Include="IdentificationCardMapper.cs" />
     <Compile Include="IdentificationTemplates\IllinoisTemplates.cs" />
     <Compile Include="IdentificationTemplates\NewJerseyTemplates.cs" />
-    <Compile Include="IndentificationReturnModel.cs" />
+    <Compile Include="IdentificationReturnModel.cs" />
     <Compile Include="InsuranceCardMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

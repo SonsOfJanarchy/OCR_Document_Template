@@ -10,7 +10,7 @@ namespace PV_Doc_Template
 {
     public class IdentificationCardMapper
     {
-        public IndentificationReturnModel MapDriversLicenseData(string identificationData)
+        public IdentificationReturnModel MapDriversLicenseData(string identificationData)
         {
             var data = DataConstants.JsonReplacePattern.Replace(identificationData, string.Empty);
             string[] words = data.Split(',');
@@ -21,7 +21,7 @@ namespace PV_Doc_Template
                 return templateMapper.MapDataToTemplate(words);
             }
             
-            return new IndentificationReturnModel();
+            return new IdentificationReturnModel();
         }
     }
 }

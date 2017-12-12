@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PV_Doc_Template
 {
-    public class IndentificationReturnModel
+    public class IdentificationReturnModel
     {
         public string firstName { get; set; }
         public string lastName { get; set; }
