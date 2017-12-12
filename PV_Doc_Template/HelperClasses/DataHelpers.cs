@@ -8,10 +8,10 @@ namespace PV_Doc_Template.HelperClasses
 {
     public class DataHelpers
     {
-        public DateTime GetBirthday(string value)
+        public DateTime GetBirthday(OCRRawDataModel.RawDataItem value)
         {
             DateTime date;
-            var isValidDate = DateTime.TryParse(value, out date);
+            var isValidDate = DateTime.TryParse(value.Value, out date);
             if (isValidDate && ((DateTime.Now.Year - date.Year) > 16))
             {
                return date;
@@ -19,11 +19,11 @@ namespace PV_Doc_Template.HelperClasses
             return DateTime.MinValue;
         }
 
-        public string GetState(string value)
+        public string GetState(OCRRawDataModel.RawDataItem value)
         {
-            if (DataConstants.usStates.Contains(value))
+            if (DataConstants.usStates.Contains(value.Value))
             {
-                return value;
+                return value.Value;
             }
             return string.Empty;
         }

@@ -12,15 +12,15 @@ namespace PV_Doc_Template
     {
         public IdentificationReturnModel MapDriversLicenseData(OCRRawDataModel identificationData)
         {
-            //foreach (var item in identificationData)
-            //{
-            //    if (item.)
-           
+            foreach (var items in identificationData.DataList)
+            {
+                if (items.Value.Equals("NJ", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    var templateMapper = new NewJerseyTemplates();
+                    return templateMapper.MapDataToTemplate(identificationData.DataList);
+                }
+            }
 
-            //    var templateMapper = new NewJerseyTemplates();
-            //    return templateMapper.MapDataToTemplate(identificationData);
-            //}
-            
             return new IdentificationReturnModel();
         }
     }
