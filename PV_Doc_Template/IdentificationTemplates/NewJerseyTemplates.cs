@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Configuration;
 using System.Text;
 using System.Threading.Tasks;
+using PV_Doc_Template.HelperClasses;
 
 namespace PV_Doc_Template.IdentificationTemplates
 {
@@ -10,20 +12,24 @@ namespace PV_Doc_Template.IdentificationTemplates
     {
         public string MapDataToTemplate(string[] data)
         {
-            string[] states = { "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY" };
+            var dataHelper = new DataHelpers();
+
             if (data.Contains("DRIVER") && data.Contains("LICENSE"))
             {
-                foreach (var word in data)
+                var model = "";
+                foreach (var item in data)
                 {
-                    DateTime date;
-                    var isValidDate = DateTime.TryParse(word, out date);
-                    if (isValidDate && ((DateTime.Now.Year - date.Year) > 16))
+                    var birthDate = dataHelper.GetBirthday(item);
+                    if (birthDate != null)
                     {
-                        var birthDate = date;
+                        var date = birthDate;
                     }
-                    if (states.Contains(word))
+                    var state = dataHelper.GetState(item);
+                    if (!String.IsNullOrWhiteSpace(state))
                     {
-                        var state = word;
+                        state = item;
+                        var zipIndex = Array.IndexOf(data, item) + 1;
+                        var zip = data[zipIndex];
                     }
                 }
                 return "this is a NJ drivers license";
