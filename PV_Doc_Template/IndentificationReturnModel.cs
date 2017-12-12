@@ -9,16 +9,16 @@ namespace PV_Doc_Template
 {
     public class IndentificationReturnModel
     {
-        private string firstName { get; set; }
-        private string lastName { get; set; }
-        private string middleName { get; set; }
-        private string sex { get; set; }
-        private DateTime dateofBirth { get; set; }
-        private string address1 { get; set; }
-        private string address2 { get; set; }
-        private string city { get; set; }
-        private string state { get; set; }
-        private string zip { get; set; }
-        private string indentificationImage { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public string middleName { get; set; }
+        public string sex { get; set; }
+        public DateTime dateofBirth { get; set; }
+        public string address1 { get; set; }
+        public string address2 { get; set; }
+        public string city { get; set; }
+        public string state { get; set; }
+        public string zip { get; set; }
+        public string[] indentificationImage { get; set; }
     }
 }
