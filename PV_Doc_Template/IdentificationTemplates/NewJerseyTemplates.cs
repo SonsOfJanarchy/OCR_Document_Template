@@ -14,9 +14,9 @@ namespace PV_Doc_Template.IdentificationTemplates
             {
                 foreach (var word in data)
                 {
-                    var date = new DateTime();
-                    DateTime.TryParse(word, out date);
-                    if ((DateTime.Now.Year - date.Year) > 16)
+                    DateTime date;
+                    var isValidDate = DateTime.TryParse(word, out date);
+                    if (isValidDate && ((DateTime.Now.Year - date.Year) > 16))
                     {
                         var birthDate = date;
                     }
