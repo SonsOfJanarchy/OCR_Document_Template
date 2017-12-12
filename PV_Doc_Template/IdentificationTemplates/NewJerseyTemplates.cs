@@ -10,6 +10,7 @@ namespace PV_Doc_Template.IdentificationTemplates
     {
         public string MapDataToTemplate(string[] data)
         {
+            string[] states = { "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY" };
             if (data.Contains("DRIVER") && data.Contains("LICENSE"))
             {
                 foreach (var word in data)
@@ -19,6 +20,10 @@ namespace PV_Doc_Template.IdentificationTemplates
                     if (isValidDate && ((DateTime.Now.Year - date.Year) > 16))
                     {
                         var birthDate = date;
+                    }
+                    if (states.Contains(word))
+                    {
+                        var state = word;
                     }
                 }
                 return "this is a NJ drivers license";

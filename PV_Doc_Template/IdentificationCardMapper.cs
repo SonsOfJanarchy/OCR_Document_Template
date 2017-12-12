@@ -14,22 +14,12 @@ namespace PV_Doc_Template
             var data = identificationData.Replace("[", string.Empty).Replace("]", string.Empty).Replace("\"", string.Empty);
             string[] words = data.Split(',');
             string[] states = {"NJ", "IL"};
-            foreach (var word in words)
+            if (words.Any(word => word.Equals("NJ")))
             {
-                if (word.Equals("NJ"))
-                {
-                    var templateMapper = new NewJerseyTemplates();
-                    return templateMapper.MapDataToTemplate(words);
-                }
+                var templateMapper = new NewJerseyTemplates();
+                return templateMapper.MapDataToTemplate(words);
             }
             
-            //switch (licenseData)
-            //{
-            //    case "NY":
-            //    {
-            //        return "thing";
-            //    }
-            //}
             return "";
         }
     }
