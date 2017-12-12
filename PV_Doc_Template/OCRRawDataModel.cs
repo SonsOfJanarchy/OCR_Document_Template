@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
@@ -9,12 +10,13 @@ namespace PV_Doc_Template
 {
     public class OCRRawDataModel
     {
-        public List<RawDataItem> DataList { get; set; } 
+        public List<RawDataItem> DataList { get; set; }
 
         public class RawDataItem 
         {
             public string Value { get; set; }
             public int LineIndex { get; set; }
+            public int Confidence { get; set; }
         }
     }
 }

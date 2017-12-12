@@ -10,16 +10,16 @@ namespace PV_Doc_Template
 {
     public class IdentificationCardMapper
     {
-        public IdentificationReturnModel MapDriversLicenseData(string identificationData)
+        public IdentificationReturnModel MapDriversLicenseData(OCRRawDataModel identificationData)
         {
-            var data = DataConstants.JsonReplacePattern.Replace(identificationData, string.Empty);
-            string[] words = data.Split(',');
-            
-            if (words.Any(word => word.Equals("NJ")))
-            {
-                var templateMapper = new NewJerseyTemplates();
-                return templateMapper.MapDataToTemplate(words);
-            }
+            //foreach (var item in identificationData)
+            //{
+            //    if (item.)
+           
+
+            //    var templateMapper = new NewJerseyTemplates();
+            //    return templateMapper.MapDataToTemplate(identificationData);
+            //}
             
             return new IdentificationReturnModel();
         }
