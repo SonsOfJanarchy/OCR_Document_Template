@@ -20,6 +20,31 @@ namespace PV_Doc_Template.Test
         {
             var data = new OCRRawDataModel {DataList = new List<OCRRawDataModel.RawDataItem>()};
 
+            #region create DataList
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "NEW",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "JERSEY",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "'\"",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "AUTO",
+                LineIndex = 0
+            });
+
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
                 Value = "DRIVER",
@@ -34,21 +59,184 @@ namespace PV_Doc_Template.Test
 
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
-                Value = "NJ",
-                LineIndex = 1
+                Value = "....",
+                LineIndex = 0
             });
-            
+
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
-                Value = "04/15/1988",
+                Value ="{gg}",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "x9000",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "99090",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "90909",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "D",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "···",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "mm",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "05-20-1956",
                 LineIndex = 1
             });
 
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
-                Value = "61111",
+                Value = "BOAT",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "05-20-2010",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "c><~",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "05-20-2014",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "LAST",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "NAME",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "SUFIX",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "FIRST",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "MIDDLE",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "123",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "NORTH",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "STATE",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "STREET",
+                LineIndex = 0
+            });
+            
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "TRENTON",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "NJ",
                 LineIndex = 1
             });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "08655-1234",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "um",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "NONE",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "¥",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "num",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
+                Value = "NONE",
+                LineIndex = 0
+            });
+            #endregion create DataList
 
             var mapper = new IdentificationCardMapper();
             var results = mapper.MapDriversLicenseData(data);
