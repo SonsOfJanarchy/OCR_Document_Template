@@ -16,7 +16,7 @@ namespace PV_Doc_Template.IdentificationTemplates
 
             if (data.Contains("DRIVER") && data.Contains("LICENSE"))
             {
-                var model = "";
+                var model = new IndentificationReturnModel();
                 foreach (var item in data)
                 {
                     var birthDate = dataHelper.GetBirthday(item);
