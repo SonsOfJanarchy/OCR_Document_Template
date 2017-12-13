@@ -17,6 +17,8 @@ namespace PV_Doc_Template.HelperClasses
             "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"
         };
 
-        public static Regex JsonReplacePattern = new Regex("[\\[\\]\"]");
+        public const string ValidZipCode = @"^[0 - 9]{5}((-)?([0-9]{5}))?$";
+        public const string ValidName = @"^[a - zA - Z][a - zA - Z, '\-.]*$";
+        public const string ValidData = @"^[a-zA-Z0-9\-. ]*$";
     }
 }

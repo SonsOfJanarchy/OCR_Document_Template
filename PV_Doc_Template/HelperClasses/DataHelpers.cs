@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace PV_Doc_Template.HelperClasses
@@ -26,6 +27,16 @@ namespace PV_Doc_Template.HelperClasses
                 return value.Value;
             }
             return string.Empty;
+        }
+
+        public bool IsValidZip(string zipCode)
+        {
+            return Regex.IsMatch(zipCode, DataConstants.ValidZipCode);
+        }
+
+        public bool IsValidName(string name)
+        {
+            return Regex.IsMatch(name, DataConstants.ValidName);
         }
     }
 }
