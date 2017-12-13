@@ -138,73 +138,73 @@ namespace PV_Doc_Template.Test
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
                 Value = "LAST",
-                LineIndex = 0
+                LineIndex = 4
             });
 
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
                 Value = "NAME",
-                LineIndex = 0
+                LineIndex = 4
             });
 
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
                 Value = "SUFIX",
-                LineIndex = 0
+                LineIndex = 4
             });
 
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
                 Value = "FIRST",
-                LineIndex = 0
+                LineIndex = 5
             });
 
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
                 Value = "MIDDLE",
-                LineIndex = 0
+                LineIndex = 5
             });
 
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
                 Value = "123",
-                LineIndex = 0
+                LineIndex = 6
             });
 
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
                 Value = "NORTH",
-                LineIndex = 0
+                LineIndex = 6
             });
 
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
                 Value = "STATE",
-                LineIndex = 0
+                LineIndex = 6
             });
 
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
                 Value = "STREET",
-                LineIndex = 0
+                LineIndex = 6
             });
             
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
                 Value = "TRENTON",
-                LineIndex = 0
+                LineIndex = 7
             });
 
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
                 Value = "NJ",
-                LineIndex = 1
+                LineIndex = 7
             });
 
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
                 Value = "08655-1234",
-                LineIndex = 0
+                LineIndex = 7
             });
 
             data.DataList.Add(new OCRRawDataModel.RawDataItem
@@ -240,6 +240,7 @@ namespace PV_Doc_Template.Test
 
             var mapper = new IdentificationCardMapper();
             var results = mapper.MapDriversLicenseData(data);
+
             Assert.AreNotEqual(results, string.Empty);
         }
     }
