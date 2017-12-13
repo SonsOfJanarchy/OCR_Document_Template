@@ -50,6 +50,10 @@
     <Compile Include="IdentificationTemplates\IllinoisTemplates.cs" />
     <Compile Include="IdentificationTemplates\NewJerseyTemplates.cs" />
     <Compile Include="IdentificationReturnModel.cs" />
+    <Compile Include="IdentificationTemplates\WashingtonTemplates.cs" />
+    <Compile Include="IdentificationTemplates\WestVirginiaTemplates.cs" />
+    <Compile Include="IdentificationTemplates\WisconsinTemplates.cs" />
+    <Compile Include="IdentificationTemplates\WyomingTemplates.cs" />
     <Compile Include="InsuranceCardMapper.cs" />
     <Compile Include="OCRRawDataModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
