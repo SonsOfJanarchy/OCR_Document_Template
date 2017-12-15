@@ -39,7 +39,7 @@ namespace PV_Doc_Template
                     break;
                 case "ARIZONA":
                     var arizonaTemplateMapper = new ArizonaTemplates();
-                    returnIndentification = arizonaTemplateMapper.MapDataToTemplate(identificationData.DataList)
+                    returnIndentification = arizonaTemplateMapper.MapDataToTemplate(identificationData.DataList);
                     break;
                 case "AR":
                     var arTemplateMapper = new ArkansasTemplates();

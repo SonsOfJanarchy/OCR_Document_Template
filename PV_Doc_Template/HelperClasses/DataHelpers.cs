@@ -22,7 +22,7 @@ namespace PV_Doc_Template.HelperClasses
 
         public string GetState(OCRRawDataModel.RawDataItem value)
         {
-            if (DataConstants.usStates.Contains(value.Value))
+            if (DataConstants.usStateAbbriviations.Contains(value.Value))
             {
                 return value.Value;
             }

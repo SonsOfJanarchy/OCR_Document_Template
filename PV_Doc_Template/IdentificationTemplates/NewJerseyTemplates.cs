@@ -17,7 +17,7 @@ namespace PV_Doc_Template.IdentificationTemplates
             StringBuilder addressStringBuilder = new StringBuilder();
             StringBuilder lastNameStringBuilder = new StringBuilder();
 
-            var containsStuff = data.Any(v => v.Value.Contains("DRIVER")) && data.Any(v=>v.Value.Contains("LICENSE"));
+            var containsStuff = data.Any(v => v.Value.Contains("DRIVER")) || data.Any(v=>v.Value.Contains("LICENSE"));
             if (containsStuff)
             {
                 foreach (var item in data)
@@ -36,13 +36,15 @@ namespace PV_Doc_Template.IdentificationTemplates
                         var zipIndex = data.FindIndex(a=> a.Value.Equals(item.Value)) + 1;
                         model.zip = data[zipIndex].Value;
                     }
-                    //Get city
+                    //Get city - how the hell do I get the city?
+
 
                     //Build Address
                     
                     if (item.LineIndex == 6)
                     {
                         addressStringBuilder.Append(item.Value.Trim()).Append(" ");
+                        //var address = ParseAddress(addressStringBuilder.ToString().TrimEnd());
                         model.address1 = addressStringBuilder.ToString().TrimEnd();
                     }
 
