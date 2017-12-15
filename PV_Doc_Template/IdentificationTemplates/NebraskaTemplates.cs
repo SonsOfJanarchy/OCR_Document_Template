@@ -7,7 +7,7 @@ using PV_Doc_Template.HelperClasses;
 
 namespace PV_Doc_Template.IdentificationTemplates
 {
-    public class NewEnglandTemplates
+    public class NebraskaTemplates
     {
         public IdentificationReturnModel MapDataToTemplate(List<OCRRawDataModel.RawDataItem> data)
         {

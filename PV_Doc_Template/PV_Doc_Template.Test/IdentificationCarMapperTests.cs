@@ -26,6 +26,12 @@ namespace PV_Doc_Template.Test
 
             data.DataList.Add(new OCRRawDataModel.RawDataItem
             {
+                Value = "Il",
+                LineIndex = 0
+            });
+
+            data.DataList.Add(new OCRRawDataModel.RawDataItem
+            {
                 Value = "'\"",
                 LineIndex = 0
             });

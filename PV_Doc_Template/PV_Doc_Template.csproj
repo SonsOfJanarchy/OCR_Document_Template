@@ -75,7 +75,7 @@
     <Compile Include="IdentificationTemplates\MissouriTemplates.cs" />
     <Compile Include="IdentificationTemplates\MontanaTemplates.cs" />
     <Compile Include="IdentificationTemplates\NevadaTemplates.cs" />
-    <Compile Include="IdentificationTemplates\NewEnglandTemplates.cs" />
+    <Compile Include="IdentificationTemplates\NebraskaTemplates.cs" />
     <Compile Include="IdentificationTemplates\NewHampshireTemplates.cs" />
     <Compile Include="IdentificationTemplates\NewJerseyTemplates.cs" />
     <Compile Include="IdentificationReturnModel.cs" />
