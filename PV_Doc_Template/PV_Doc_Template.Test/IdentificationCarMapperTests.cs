@@ -1,14 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
-using NUnit.Framework.Constraints;
-using PV_Doc_Template;
 
 namespace PV_Doc_Template.Test
 {

@@ -20,5 +20,6 @@ namespace PV_Doc_Template
         public string state { get; set; }
         public string zip { get; set; }
         public string[] indentificationImage { get; set; }
+        public int DataLength { get; set; }
     }
 }

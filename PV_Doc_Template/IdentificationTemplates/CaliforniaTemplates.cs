@@ -65,6 +65,8 @@ namespace PV_Doc_Template.IdentificationTemplates
                     }
                 }
             }
+
+            model.DataLength = model.ToString().Length;
             return model;
         }
     }

@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Configuration;
 using System.Text;
-using System.Threading.Tasks;
 using PV_Doc_Template.HelperClasses;
 
 namespace PV_Doc_Template.IdentificationTemplates
@@ -68,6 +66,7 @@ namespace PV_Doc_Template.IdentificationTemplates
                     }
                 }
             }
+            model.DataLength = model.ToString().Length;
             return model;
         }
     }
