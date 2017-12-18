@@ -50,9 +50,9 @@ namespace PV_Doc_Template.IdentificationTemplates
                     if (item.LineIndex == 7)
                     {
                         cityStateZipBuilder.Append(item.Value.Trim()).Append(" ");
+                        model.fullAddress = model.address1 + " " + cityStateZipBuilder.ToString().TrimEnd();
                     }
-                    var addressToParse = model.address1 + " " + cityStateZipBuilder.ToString().TrimEnd();
-
+                    
                     //Get LastName using the line index, which should always be the 4th line
                     if (item.LineIndex == 4)
                     {
