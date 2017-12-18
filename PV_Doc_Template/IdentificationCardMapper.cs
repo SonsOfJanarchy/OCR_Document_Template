@@ -27,11 +27,12 @@ namespace PV_Doc_Template
                     }
 
                 if ((items.Value.Equals("AK", StringComparison.InvariantCultureIgnoreCase)) || (items.Value.Equals("Alaska", StringComparison.InvariantCultureIgnoreCase)))
-                    {
+                {
 
                     var akTemplatemapper = new AlaskaTemplates();
                     var results1 = akTemplatemapper.MapDataToTemplate(identificationData.DataList);
                     modelCollection.Add(results1);
+                }
 
                 if ((items.Value.Equals("AZ", StringComparison.InvariantCultureIgnoreCase)) || (items.Value.Equals("Arizona", StringComparison.InvariantCultureIgnoreCase)))
                     {
@@ -468,8 +469,9 @@ namespace PV_Doc_Template
                     }
 
                 }
-            }
+            
 
+            var returnIdentification = modelCollection.Max(x => x.DataLength);
             
             return returnIndentification;
         }
