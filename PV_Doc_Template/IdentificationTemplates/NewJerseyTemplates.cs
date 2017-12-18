@@ -13,6 +13,7 @@ namespace PV_Doc_Template.IdentificationTemplates
             var dataHelper = new DataHelpers();
             var model = new IdentificationReturnModel();
             StringBuilder addressStringBuilder = new StringBuilder();
+            StringBuilder cityStateZipBuilder = new StringBuilder();
             StringBuilder lastNameStringBuilder = new StringBuilder();
 
             var containsStuff = data.Any(v => v.Value.Contains("DRIVER")) || data.Any(v=>v.Value.Contains("LICENSE"));
@@ -45,6 +46,12 @@ namespace PV_Doc_Template.IdentificationTemplates
                         //var address = ParseAddress(addressStringBuilder.ToString().TrimEnd());
                         model.address1 = addressStringBuilder.ToString().TrimEnd();
                     }
+
+                    if (item.LineIndex == 7)
+                    {
+                        cityStateZipBuilder.Append(item.Value.Trim()).Append(" ");
+                    }
+                    var addressToParse = model.address1 + " " + cityStateZipBuilder.ToString().TrimEnd();
 
                     //Get LastName using the line index, which should always be the 4th line
                     if (item.LineIndex == 4)
