@@ -22,5 +22,15 @@ namespace PV_Doc_Template
         public string zip { get; set; }
         public string[] indentificationImage { get; set; }
         public int DataLength { get; set; }
+
+        public void PopulateAddressInfo(string address)
+        {
+            var seperatedAddress = address.Split(',');
+
+            address1 = seperatedAddress[0].Trim();
+            city = seperatedAddress[1].Trim();
+            state = seperatedAddress[2].Split(' ')[1].Trim();
+            zip = seperatedAddress[2].Split(' ')[2].Trim();
+        }
     }
 }
