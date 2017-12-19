@@ -16,7 +16,7 @@ namespace PV_Doc_Template.IdentificationTemplates
             StringBuilder addressStringBuilder = new StringBuilder();
             StringBuilder lastNameStringBuilder = new StringBuilder();
 
-            var containsStuff = data.Any(v => v.Value.Contains("DRIVER")) && data.Any(v => v.Value.Contains("LICENSE"));
+            var containsStuff = data.Any(v => v.Value.Contains("DRIVER")) || data.Any(v => v.Value.Contains("LICENSE"));
             if (containsStuff)
             {
                 foreach (var item in data)
