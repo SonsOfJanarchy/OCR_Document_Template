@@ -39,21 +39,21 @@ namespace PV_Doc_Template.IdentificationTemplates
 
                     //Build Address
 
-                    if (item.LineIndex == 6)
+                    if (item.LineIndex == 7)
                     {
                         addressStringBuilder.Append(item.Value.Trim()).Append(" ");
                         model.address1 = addressStringBuilder.ToString().TrimEnd();
                     }
 
                     //Get LastName using the line index, which should always be the 4th line
-                    if (item.LineIndex == 4)
+                    if (item.LineIndex == 5)
                     {
                         lastNameStringBuilder.Append(item.Value.Trim()).Append(" ");
                         model.lastName = lastNameStringBuilder.ToString().TrimEnd();
                     }
 
                     //Get FirstName and middle name
-                    if (item.LineIndex == 5)
+                    if (item.LineIndex == 6)
                     {
                         model.firstName = string.IsNullOrWhiteSpace(model.firstName) ? item.Value : model.firstName;
                         //Assuming the the middle name comes after the first name, this may not be true, but we don't have a better way to get it yet.

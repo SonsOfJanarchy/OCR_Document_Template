@@ -53,7 +53,7 @@ namespace PV_Doc_Template.IdentificationTemplates
                     }
 
                     //Get FirstName and middle name
-                    if (item.LineIndex == 5)
+                    if (item.LineIndex == 2)
                     {
                         model.firstName = string.IsNullOrWhiteSpace(model.firstName) ? item.Value : model.firstName;
                         //Assuming the the middle name comes after the first name, this may not be true, but we don't have a better way to get it yet.
