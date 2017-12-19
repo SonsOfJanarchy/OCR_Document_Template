@@ -14,6 +14,7 @@ namespace PV_Doc_Template.IdentificationTemplates
             var dataHelper = new DataHelpers();
             var model = new IdentificationReturnModel();
             StringBuilder addressStringBuilder = new StringBuilder();
+            StringBuilder cityStateZipBuilder = new StringBuilder();
             StringBuilder lastNameStringBuilder = new StringBuilder();
 
             var containsStuff = data.Any(v => v.Value.Contains("DRIVER")) || data.Any(v => v.Value.Contains("LICENSE"));
@@ -39,10 +40,18 @@ namespace PV_Doc_Template.IdentificationTemplates
 
                     //Build Address
 
-                    if (item.LineIndex == 6)
+                     if (item.LineIndex == 6)
+                        if (item.LineIndex == 6)
+                        {
+                            addressStringBuilder.Append(item.Value.Trim()).Append(" ");
+                            //var address = ParseAddress(addressStringBuilder.ToString().TrimEnd());
+                            model.address1 = addressStringBuilder.ToString().TrimEnd();
+                        }
+
+                    if (item.LineIndex == 7)
                     {
-                        addressStringBuilder.Append(item.Value.Trim()).Append(" ");
-                        model.address1 = addressStringBuilder.ToString().TrimEnd();
+                        cityStateZipBuilder.Append(item.Value.Trim()).Append(" ");
+                        model.fullAddress = model.address1 + " " + cityStateZipBuilder.ToString().TrimEnd();
                     }
 
                     //Get LastName using the line index, which should always be the 4th line
@@ -63,6 +72,12 @@ namespace PV_Doc_Template.IdentificationTemplates
                             model.middleName = data[middleNameIndex].Value;
                         }
                     }
+                }
+                var newAddress = dataHelper.GetAddress(model.fullAddress);
+
+                if (!string.IsNullOrWhiteSpace(newAddress))
+                {
+                    model.PopulateAddressInfo(newAddress);
                 }
             }
             model.DataLength = model.ToString().Length;
