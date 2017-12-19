@@ -467,7 +467,6 @@ namespace PV_Doc_Template
                         modelCollection.Add(results48);
 
                     }
-
                 }
 
             if (modelCollection.Any())

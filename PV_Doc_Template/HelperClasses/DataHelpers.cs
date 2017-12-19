@@ -14,7 +14,8 @@ namespace PV_Doc_Template.HelperClasses
         public DateTime GetBirthday(OCRRawDataModel.RawDataItem value)
         {
             DateTime date;
-            var isValidDate = DateTime.TryParse(value.Value, out date);
+            var tempDate = value.Value.Replace("O", "0");
+            var isValidDate = DateTime.TryParse(tempDate, out date);
             if (isValidDate && ((DateTime.Now.Year - date.Year) > 16))
             {
                 return date;
