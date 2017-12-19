@@ -470,7 +470,7 @@ namespace PV_Doc_Template
 
                 }
 
-            if (modelCollection != null)
+            if (modelCollection.Any())
             {
                 var maxValue = modelCollection.Max(x => x.DataLength);
                 var modelItem = modelCollection.FindIndex(m => m.DataLength == maxValue);
