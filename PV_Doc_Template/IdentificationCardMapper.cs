@@ -470,10 +470,16 @@ namespace PV_Doc_Template
 
                 }
 
-            var maxValue = modelCollection.Max(x => x.DataLength);
-            var modelItem = modelCollection.FindIndex(m => m.DataLength == maxValue);
-            
-            return modelCollection[modelItem];
+            if (modelCollection != null)
+            {
+                var maxValue = modelCollection.Max(x => x.DataLength);
+                var modelItem = modelCollection.FindIndex(m => m.DataLength == maxValue);
+
+                return modelCollection[modelItem];
+            }
+
+            return null;
+
         }
     }
 }
