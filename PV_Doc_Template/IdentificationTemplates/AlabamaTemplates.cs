@@ -42,6 +42,8 @@ namespace PV_Doc_Template.IdentificationTemplates
                     if (item.LineIndex == 6)
                     {
                         addressStringBuilder.Append(item.Value.Trim()).Append(" ");
+
+                        var newAddress = dataHelper.GetAddress(addressStringBuilder.ToString());
                         model.address1 = addressStringBuilder.ToString().TrimEnd();
                     }
 

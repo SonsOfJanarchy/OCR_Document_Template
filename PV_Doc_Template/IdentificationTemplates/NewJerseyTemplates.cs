@@ -72,6 +72,12 @@ namespace PV_Doc_Template.IdentificationTemplates
                         }   
                     }
                 }
+                var newAddress = dataHelper.GetAddress(model.fullAddress);
+
+                if (!string.IsNullOrWhiteSpace(newAddress))
+                {
+                    model.PopulateAddressInfo(newAddress);
+                }
             }
             model.DataLength = model.ToString().Length;
             return model;

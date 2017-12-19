@@ -25,8 +25,8 @@ namespace PV_Doc_Template
                     modelCollection.Add(results);
 
                     }
-
-                if ((items.Value.Equals("AK", StringComparison.InvariantCultureIgnoreCase)) || (items.Value.Equals("Alaska", StringComparison.InvariantCultureIgnoreCase)))
+                if ((items.Value.Equals("AK", StringComparison.InvariantCultureIgnoreCase)) ||
+                    (items.Value.Equals("Alaska", StringComparison.InvariantCultureIgnoreCase)))
                 {
 
                     var akTemplatemapper = new AlaskaTemplates();
@@ -469,7 +469,6 @@ namespace PV_Doc_Template
                     }
 
                 }
-            
 
             var maxValue = modelCollection.Max(x => x.DataLength);
             var modelItem = modelCollection.FindIndex(m => m.DataLength == maxValue);
