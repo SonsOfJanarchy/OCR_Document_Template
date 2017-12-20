@@ -48,7 +48,7 @@ namespace PV_Doc_Template.IdentificationTemplates
                             model.address1 = addressStringBuilder.ToString().TrimEnd();
                         }
 
-                    if (item.LineIndex == 7)
+                    if (item.LineIndex == 8)
                     {
                         cityStateZipBuilder.Append(item.Value.Trim()).Append(" ");
                         model.fullAddress = model.address1 + " " + cityStateZipBuilder.ToString().TrimEnd();
