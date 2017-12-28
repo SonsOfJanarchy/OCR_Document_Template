@@ -10,6 +10,8 @@ namespace PV_Doc_Template
     public class IdentificationReturnModel
     {
         public string firstName { get; set; }
+        public string cleanFirstName { get; set; }
+        public string cleanSecondName { get; set; }
         public string lastName { get; set; }
         public string middleName { get; set; }
         public string sex { get; set; }

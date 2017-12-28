@@ -42,6 +42,11 @@ namespace PV_Doc_Template.HelperClasses
             return Regex.IsMatch(name, DataConstants.ValidName);
         }
 
+        public string cleanLastName(string value)
+        {
+            return Regex.Replace(value, @"[^a-zA-Z.]", string.Empty);
+        }
+        
         public string GetAddress(string address)
         {
             var googleApiKey = "AIzaSyAH7G0fIkN5AynY727DhCyajQisokxf9es";

@@ -54,10 +54,11 @@ namespace PV_Doc_Template.IdentificationTemplates
                     }
 
                     //Get LastName using the line index, which should always be the 4th line
-                    if (item.LineIndex == 4)
+                    if (item.LineIndex == 10)
                     {
                         lastNameStringBuilder.Append(item.Value.Trim()).Append(" ");
-                        model.lastName = lastNameStringBuilder.ToString().TrimEnd();
+                        var lName = lastNameStringBuilder.ToString().TrimEnd();
+                        model.lastName = dataHelper.cleanLastName(lName);
                     }
 
                     //Get FirstName and middle name

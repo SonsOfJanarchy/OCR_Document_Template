@@ -58,7 +58,8 @@ namespace PV_Doc_Template.IdentificationTemplates
                     if (item.LineIndex == 10)
                     {
                         lastNameStringBuilder.Append(item.Value.Trim()).Append(" ");
-                        model.lastName = lastNameStringBuilder.ToString().TrimEnd();
+                        var lName = lastNameStringBuilder.ToString().TrimEnd();
+                        model.lastName = dataHelper.cleanLastName(lName);
                     }
 
                     //Get FirstName and middle name
@@ -79,6 +80,7 @@ namespace PV_Doc_Template.IdentificationTemplates
                 {
                     model.PopulateAddressInfo(newAddress);
                 }
+
             }
             model.DataLength = model.ToString().Length;
             return model;
